@@ -22,12 +22,12 @@ services:
     ports:
       - 8083:8083
     environment:
-      - OTR_HOST=10.0.1.5
+      - OTR_HOST=CHANGEME
   owntracks-frontend:
     restart: unless-stopped
     image: owntracks/frontend
     ports:
       - 8084:80
     environment:
-      - SERVER_HOST=10.0.1.5
+      - SERVER_HOST=CHANGEME
       - SERVER_PORT=8083

@@ -3,7 +3,7 @@ services:
     restart: unless-stopped
     image: eclipse-mosquitto
     volumes:
-      - /etc/owntracks-meshtastic/mosquitto:/mosquitto
+      - /etc/owntracks-meshtastic/mosquitto:/mosquitto/config
     ports:
       - 1883:1883
       - 9001:9001

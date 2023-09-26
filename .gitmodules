@@ -1,0 +1,3 @@
+[submodule "meshtastic-bridge"]
+	path = meshtastic-bridge
+	url = https://github.com/geoffwhittington/meshtastic-bridge

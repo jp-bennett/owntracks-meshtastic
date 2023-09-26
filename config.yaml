@@ -1,0 +1,18 @@
+mqtt_servers:
+  - name: external
+    server: 10.0.1.5
+    port: 1883
+    topic: msh/2/json/#
+    pipelines:
+      owntrack:
+      - owntracks_plugin:
+          log_level: debug
+          server_name: external
+          tid_table:
+            "-1919779044": ["Van", "GV"]
+            "-631445440": ["tbeamRed", "TR"]
+            "-1920172752": ["Home", "HR"]
+            "749422624": ["Orange", "OR"]
+            "1727134472": ["Blue", "BL"]
+            "-631443900": ["Tbeam1", "T1"]
+            "-1519420347": ["Meshenger", "MS"]

@@ -3,22 +3,22 @@ services:
     restart: unless-stopped
     image: eclipse-mosquitto
     volumes:
-      - /etc/owntracks/mosquitto:/mosquitto
+      - /etc/owntracks-meshtastic/mosquitto:/mosquitto
     ports:
       - 1883:1883
-      - 9001:9001    
+      - 9001:9001
   meshtastic-bridge:
     restart: unless-stopped
     build:
-      context: /etc/owntracks/meshtastic-bridge
+      context: /etc/owntracks-meshtastic/meshtastic-bridge
       dockerfile: Dockerfile
     volumes:
-      - /etc/owntracks/config.yaml:/code/config.yaml
+      - /etc/owntracks-meshtastic/config.yaml:/code/config.yaml
   owntracks-recorder:
     restart: unless-stopped
     image: owntracks/recorder
     volumes:
-      - /etc/owntracks/store:/store
+      - /etc/owntracks-meshtastic/store:/store
     ports:
       - 8083:8083
     environment:

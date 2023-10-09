@@ -9,8 +9,8 @@ StartLimitIntervalSec=60
 
 [Service]
 WorkingDirectory=/etc/owntracks-meshtastic
-ExecStart=/usr/local/bin/docker-compose up
-ExecStop=/usr/local/bin/docker-compose down
+ExecStart=docker-compose up
+ExecStop=docker-compose down
 TimeoutStartSec=0
 Restart=on-failure
 StartLimitBurst=3
